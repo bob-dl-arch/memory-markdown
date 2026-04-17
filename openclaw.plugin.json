@@ -1,0 +1,31 @@
+{
+  "id": "memory-markdown",
+  "name": "Memory Markdown",
+  "description": "Filesystem-based memory storage with Markdown and frontmatter for AI agents",
+  "version": "1.0.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "basePath": {
+        "type": "string",
+        "description": "Base path for memory storage (default: ./memories)"
+      },
+      "autoIndex": {
+        "type": "boolean",
+        "description": "Auto-build index on startup",
+        "default": true
+      },
+      "autoCapture": {
+        "type": "boolean",
+        "description": "Auto-capture memories after agent ends (KG auto-organization)",
+        "default": true
+      },
+      "autoRecall": {
+        "type": "boolean",
+        "description": "Auto-inject relevant memories before agent starts",
+        "default": true
+      }
+    }
+  }
+}
